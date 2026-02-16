@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apply | GAB – Global Academic Bridge</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="GAB – Global Academic Bridge. End-to-end support for international and Gulf students studying in Egypt." />
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html" aria-label="GAB Home">
+        <div class="mark">G</div>
+        <div class="name">GAB<br><small>Global Academic Bridge</small></div>
+      </a>
+      <div class="navlinks">
+        <a class="" href="index.html">Home</a>
+        <a class="" href="about.html">About</a>
+        <a class="" href="services.html">Services</a>
+        <a class="" href="packages.html">Packages</a>
+        <a class="active" href="apply.html">Apply</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="cta">
+        <a class="btn btn-outline" href="index.html#contact">Talk to us</a>
+        <a class="btn btn-primary" href="apply.html">Apply Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section class="section">
+  <div class="container">
+    <div class="kicker">Apply</div>
+    <div class="h2">Student Application Form</div>
+    <p class="lead">Fill in your details and we will contact you within 24 hours.</p>
+
+    <div class="form-wrap">
+      <div id="ok" class="notice">✅ Application submitted successfully. Redirecting…</div>
+      <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+      <form id="gabForm" action="https://script.google.com/macros/s/AKfycbysWq0VlLRom7k4v5uyBai0PfRE4NY6agc6PAbzw8bTF9NH1-uco0o8wh-HKlugmw3Zsg/exec" method="POST" target="hidden_iframe" class="card" style="margin-top:16px">
+        <label>Full Name</label>
+        <input type="text" name="fullName" required>
+
+        <label>Nationality</label>
+        <input type="text" name="nationality" required>
+
+        <label>Passport Number</label>
+        <input type="text" name="passport" required>
+
+        <label>Email Address</label>
+        <input type="email" name="email" required>
+
+        <label>Phone / WhatsApp</label>
+        <input type="text" name="phone" required>
+
+        <label>Preferred Major</label>
+        <input type="text" name="major" required>
+
+        <label>Preferred University (if any)</label>
+        <input type="text" name="university">
+
+        <label>Selected Package</label>
+        <select name="package">
+          <option value="BASIC Package">BASIC Package</option>
+          <option value="PREMIUM Package">PREMIUM Package</option>
+          <option value="VIP Package">VIP Package</option>
+        </select>
+
+        <label>Additional Notes</label>
+        <textarea rows="4" name="notes"></textarea>
+
+        <input type="hidden" name="source" value="Website Form">
+        <input type="hidden" name="submittedAt" id="submittedAt">
+
+        <button class="btn btn-primary" type="submit" style="width:100%;padding:14px 16px;border-radius:12px">Submit Application</button>
+      </form>
+
+      <p style="margin:12px 0 0;color:var(--muted);text-align:center">
+        Prefer WhatsApp? <a href="https://wa.me/201154524702" target="_blank" rel="noopener" style="text-decoration:underline;color:var(--navy);font-weight:800">Chat with us</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.getElementById("submittedAt").value = new Date().toISOString();
+  document.getElementById("gabForm").addEventListener("submit", function(){
+    document.getElementById("ok").style.display = "block";
+    setTimeout(function(){
+      window.location.href = "/thank-you.html";
+    }, 900);
+  });
+</script>
+
+
+<div class="footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <div class="brand" style="padding:0">
+          <div class="mark">G</div>
+          <div class="name">GAB<br><small>Global Academic Bridge</small></div>
+        </div>
+        <p style="margin:12px 0 0; line-height:1.7">
+          We support international and Gulf students with end‑to‑end academic services in Egypt — from admissions to arrival and ongoing support.
+        </p>
+        <small class="muted">© 2026 GAB – Global Academic Bridge. All rights reserved.</small>
+      </div>
+      <div>
+        <div class="kicker">Contact</div>
+        <div style="margin-top:10px; line-height:1.9">
+          <div><b>Location:</b> 5th Settlement, New Cairo</div>
+          <div><b>Phone:</b> 01154524702 · 01153091299 · 01091964120</div>
+          <div><b>Email:</b> <a href="mailto:gab366.eg@gmail.com">gab366.eg@gmail.com</a></div>
+        </div>
+        <div style="margin-top:12px">
+          <span class="badge">Your Academic Journey Starts Here</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<a class="whatsapp" href="https://wa.me/201154524702" target="_blank" rel="noopener">WhatsApp</a>
+
+</body>
+</html>
